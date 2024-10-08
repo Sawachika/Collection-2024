@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "xabikos.javascriptsnippets",
+    "amandeepmittal.pug",
+    "stylelint.vscode-stylelint",
+    "sysoev.language-stylus",
+    "antfu.unocss",
+    "vscode-icons-team.vscode-icons",
+    "pkief.material-icon-theme",
+  ]
+}

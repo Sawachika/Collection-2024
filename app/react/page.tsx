@@ -1,19 +1,19 @@
 import { Image } from 'antd'
 import Link from 'next/link'
 
-export default function Vue () {
+export default function React () {
   return (
     <main className='grid gap-4 p-4'>
-      <div className='md:flex gap-4'>
-        <Image src="/image/r1.jpg" alt="Practice" width={350} />
-        <article>
+      <div className='md:flex gap-4 rounded-lg overflow-hidden bg-zinc-800'>
+        <Image src="/image/r1.jpg" alt="Practice" width={380} />
+        <article className='p-2'>
           <Link href="https://next-js-dashboard-c2l9ko1tc-sawachikas-projects.vercel.app/" target="_blank" className='flex gap-2 text-blue-400'>
             <span>Practice</span>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h6q.425 0 .713.288T12 4t-.288.713T11 5H5v14h14v-6q0-.425.288-.712T20 12t.713.288T21 13v6q0 .825-.587 1.413T19 21zM19 6.4L10.4 15q-.275.275-.7.275T9 15t-.275-.7t.275-.7L17.6 5H15q-.425 0-.712-.288T14 4t.288-.712T15 3h5q.425 0 .713.288T21 4v5q0 .425-.288.713T20 10t-.712-.288T19 9z"/></svg>
           </Link>
-          <p>Next.js official free course.</p>
+          <p>
+            Project completed following the offcial course content, and resolved some type error issues.
+          </p>
         </article>
       </div>
     </main>

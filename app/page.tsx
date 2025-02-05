@@ -1,16 +1,17 @@
 'use client'
 import { ConfigProvider, theme, Timeline } from 'antd'
+import Projects from '@/app/ui/Projects'
 
 export default function Home() {
   return (
     <ConfigProvider theme={{ algorithm: theme.darkAlgorithm }}>
       <main className='p-4'>
-        <p className='mb-4 text-xl text-center'>This website using React, Next.js, Ant Design, Tailwind</p>
+        <p className='mb-4 text-xl text-center'>This website using TypeScript, React, Next.js, Ant Design, Tailwind</p>
         <h2 className='mb-4 text-xl text-center'>My Learning Roadmap</h2>
         <Timeline mode='left' items={[
           {
             label: '2024 ~',
-            children: 'React, Next.js'
+            children: 'TypeScript, React, Next.js'
           },
           {
             label: '2022 ~ 2024',
@@ -26,9 +27,16 @@ export default function Home() {
           },
           {
             label: '2015 ~ 2017',
-            children: 'HTML5, CSS3, BootStrap, JavaScript, JQuery, AJAX, PHP, MySQL'
+            children: 'HTML5, CSS3, BootStrap, JavaScript, JQuery, AJAX, PHP, Laravel, MySQL'
           },
         ]} />
+        <div className='text-center'>
+          <div className='inline-flex justify-center gap-2 p-4 rounded-xl bg-gray-800'>
+          View my
+            <Projects showHome={false} />
+          projects
+          </div>
+        </div>
       </main>
     </ConfigProvider>
   )

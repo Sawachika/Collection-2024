@@ -4,19 +4,20 @@ import { CollectionHtml } from '@/app/lib/data'
 
 export default function Home() {
   return (
-    <main className='grid grid-cols-2 md:grid-cols-4 gap-4 p-4'>
-      { CollectionHtml.map(({ src, title, link }) => {
+    <main className='grid grid-cols-2 md:grid-cols-4 items-start gap-4 p-4'>
+      { CollectionHtml.map(({ src, title, descript, link }) => {
         return (
-          <div key={title}>
+          <div key={title} className='rounded-lg overflow-hidden bg-zinc-800'>
             <Image src={src} alt={title} />
-            { link ? (
-              <Link href={link} target='_blank' className='flex items-center gap-2 text-blue-400'>
-                <span>{title}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-5">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
-                </svg>
-              </Link>
-            ) : <p>{title}</p> }
+            <div className='px-3 py-2'>
+              { link ? (
+                <Link href={link} target='_blank' className='flex items-center gap-2 text-blue-400'>
+                  <span className='font-bold text-lg'>{title}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h6q.425 0 .713.288T12 4t-.288.713T11 5H5v14h14v-6q0-.425.288-.712T20 12t.713.288T21 13v6q0 .825-.587 1.413T19 21zM19 6.4L10.4 15q-.275.275-.7.275T9 15t-.275-.7t.275-.7L17.6 5H15q-.425 0-.712-.288T14 4t.288-.712T15 3h5q.425 0 .713.288T21 4v5q0 .425-.288.713T20 10t-.712-.288T19 9z"/></svg>
+                </Link>
+              ) : <p className='text-amber-400 font-bold text-lg'>{title}</p> }
+              <p>{descript}</p>
+            </div>
           </div>
         )
       }) }
